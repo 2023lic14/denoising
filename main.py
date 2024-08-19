@@ -279,7 +279,7 @@ print("Num params: ", sum(p.numel() for p in model.parameters()))
 device = "cuda" if torch.cuda.is_available() else "cpu"
 model.to(device)
 optimizer = Adam(model.parameters(), lr=0.001)
-epochs = 10  # Try more!
+epochs = 500  # Try more!
 
 for epoch in range(epochs):
     for step, batch in enumerate(dataloader):
